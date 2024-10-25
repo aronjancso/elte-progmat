@@ -19,10 +19,10 @@ namespace C1
         static void Main(string[] args)
         {
             // Deklaracio
-            int     n;
+            int n;
             Ember[] emberek;
-            Ember   keresettEmber;
-            int     keresettIndex;
+            Ember keresettEmber;
+            int keresettIndex;
 
             // Beolvasas
             Console.Error.Write("n = ");
@@ -40,7 +40,7 @@ namespace C1
             }
 
             // Feldolgozas
-            keresettIndex    = 1;
+            keresettIndex = 1;
             keresettEmber = emberek[keresettIndex - 1];
             for (int i = 0; i < n; i++)
             {
@@ -48,7 +48,7 @@ namespace C1
                     ((keresettEmber.ev * 10000) + (keresettEmber.ho * 100) + keresettEmber.nap))
                 {
                     keresettEmber = emberek[i];
-                    keresettIndex    = i + 1;
+                    keresettIndex = i + 1;
                 }
             }
 
