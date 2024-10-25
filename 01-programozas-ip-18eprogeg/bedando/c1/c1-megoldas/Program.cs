@@ -44,8 +44,8 @@ namespace C1
             keresett = emberek[index - 1];
             for (int i = 0; i < n; i++)
             {
-                if (((emberek[i].ev * 10000) + (emberek[i].ho * 100) + (emberek[i].nap)) <
-                    ((keresett.ev * 10000) + (keresett.ho * 100) + (keresett.nap)))
+                if (((emberek[i].ev * 10000) + (emberek[i].ho * 100) + emberek[i].nap) <
+                    ((keresett.ev * 10000) + (keresett.ho * 100) + keresett.nap))
                 {
                     keresett = emberek[i];
                     index    = i + 1;
