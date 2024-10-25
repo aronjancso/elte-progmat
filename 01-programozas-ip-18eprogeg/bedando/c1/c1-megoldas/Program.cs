@@ -21,8 +21,8 @@ namespace C1
             // Deklaracio
             int     n;
             Ember[] emberek;
-            Ember   keresett;
-            int     index;
+            Ember   keresettEmber;
+            int     keresettIndex;
 
             // Beolvasas
             Console.Error.Write("n = ");
@@ -40,20 +40,20 @@ namespace C1
             }
 
             // Feldolgozas
-            index    = 1;
-            keresett = emberek[index - 1];
+            keresettIndex    = 1;
+            keresettEmber = emberek[keresettIndex - 1];
             for (int i = 0; i < n; i++)
             {
                 if (((emberek[i].ev * 10000) + (emberek[i].ho * 100) + emberek[i].nap) <
-                    ((keresett.ev * 10000) + (keresett.ho * 100) + keresett.nap))
+                    ((keresettEmber.ev * 10000) + (keresettEmber.ho * 100) + keresettEmber.nap))
                 {
-                    keresett = emberek[i];
-                    index    = i + 1;
+                    keresettEmber = emberek[i];
+                    keresettIndex    = i + 1;
                 }
             }
 
             // Kiiras
-            Console.WriteLine(index);
+            Console.WriteLine(keresettIndex);
         }
     }
 }
